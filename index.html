@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Week Challenge - Immerse Education</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slideshow">
+            <div class="hero-slide active" style="background-image: url('assets/hero-graduation.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/hero-students.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/hero-lecture.jpg');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>College is a Lifechanger</h1>
+            <p class="hero-subtitle">Find out how well you can thrive in your dream university.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Left Column: Webinar Info -->
+                <div class="webinar-info">
+                    <h2>Join Our Expert Webinar</h2>
+                    <p class="webinar-intro">Discover the insider secrets to university success</p>
+                    
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <img src="assets/icon-admissions.svg" alt="Admissions" class="benefit-icon">
+                            <div>
+                                <h3>How Admissions Really Work</h3>
+                                <p>Understand what top universities look for beyond grades</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <img src="assets/icon-standout.svg" alt="Stand Out" class="benefit-icon">
+                            <div>
+                                <h3>Stand Out From Other Applicants</h3>
+                                <p>Learn proven strategies to make your application shine</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <img src="assets/icon-mentors.svg" alt="Mentors" class="benefit-icon">
+                            <div>
+                                <h3>Learn From Real University Mentors</h3>
+                                <p>Get guidance from students who've been there</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <img src="assets/icon-qa.svg" alt="Q&A" class="benefit-icon">
+                            <div>
+                                <h3>Q&A With Experts</h3>
+                                <p>Get your specific questions answered live</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Registration Form -->
+                <div class="form-wrapper">
+                    <div class="form-container sticky-form">
+                        <h2>Register for Free Webinar</h2>
+                        <p class="form-subtitle">Secure your spot today</p>
+                        
+                        <!-- Salesforce Web-to-Lead Form -->
+                        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="webinarForm" onsubmit="return validateForm()">
+                            <!-- Salesforce Org ID -->
+                            <input type="hidden" name="oid" value="00Dd200000SzGqv">
+                            <input type="hidden" name="retURL" value="thank-you.html">
+                            
+                            <div class="form-group">
+                                <label for="first_name">First Name *</label>
+                                <input type="text" id="first_name" name="first_name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="last_name">Last Name *</label>
+                                <input type="text" id="last_name" name="last_name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="student_age">Student Age *</label>
+                                <input type="number" id="student_age" name="00N8d00000Q9fXX" min="10" max="99" maxlength="2" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="area_of_study">Area of Study *</label>
+                                <select id="area_of_study" name="00N8d00000Q9fXY" required>
+                                    <option value="">Select...</option>
+                                    <option value="Computer Science">Computer Science</option>
+                                    <option value="Medicine">Medicine</option>
+                                    <option value="Law">Law</option>
+                                    <option value="Economics">Economics</option>
+                                    <option value="Engineering">Engineering</option>
+                                    <option value="Psychology">Psychology</option>
+                                    <option value="Physics">Physics</option>
+                                    <option value="Chemistry">Chemistry</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country_preference">Country of Study Preference *</label>
+                                <select id="country_preference" name="00N8d00000Q9fXZ" required>
+                                    <option value="">Select...</option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="degree_interest">Degree Interest *</label>
+                                <select id="degree_interest" name="00N8d00000Q9fXa" required>
+                                    <option value="">Select...</option>
+                                    <option value="Undergraduate">Undergraduate</option>
+                                    <option value="Masters">Masters</option>
+                                    <option value="PhD">PhD</option>
+                                    <option value="Undecided">Undecided</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="target_university">Target University</label>
+                                <input type="text" id="target_university" name="00N8d00000Q9fXb" placeholder="e.g., Harvard, Oxford">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="zoom_attending">Will You Attend the Zoom Webinar? *</label>
+                                <select id="zoom_attending" name="00N8d00000Q9fXc" required>
+                                    <option value="">Select...</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="Maybe">Maybe</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary" onclick="trackWebinarRegistration()">Register Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Info Section -->
+    <section class="game-info">
+        <div class="container">
+            <h2>Experience University Life Through Our Interactive Game</h2>
+            <p class="section-subtitle">Test your readiness for top universities with our College Week Challenge</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="assets/icon-planning.svg" alt="Planning" class="feature-icon">
+                    <h3>Smart Planning</h3>
+                    <p>Learn to balance academics, career opportunities, and social life effectively</p>
+                </div>
+                
+                <div class="feature-card">
+                    <img src="assets/icon-balance.svg" alt="Balance" class="feature-icon">
+                    <h3>Study-Life Balance</h3>
+                    <p>Discover how successful students manage their time and energy</p>
+                </div>
+                
+                <div class="feature-card">
+                    <img src="assets/icon-insights.svg" alt="Insights" class="feature-icon">
+                    <h3>Development Insights</h3>
+                    <p>Get personalized feedback on your strengths and areas for improvement</p>
+                </div>
+            </div>
+            
+            <div class="game-screenshots">
+                <h3>Experience Life at Top Universities</h3>
+                <div class="screenshots-grid">
+                    <div class="screenshot-item">
+                        <img src="assets/game-landing.jpg" alt="College Week Challenge">
+                        <p>Game Landing</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="assets/game-profile.jpg" alt="Profile Setup">
+                        <p>Profile Setup</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="assets/game-university.jpg" alt="University Selection">
+                        <p>Choose University</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="assets/game-monday.jpg" alt="Gameplay">
+                        <p>Daily Planning</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="assets/game-tuesday.jpg" alt="Task Management">
+                        <p>Time Management</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="assets/game-results.jpg" alt="Results">
+                        <p>Get Results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Play Game CTA -->
+    <section class="game-cta">
+        <div class="container">
+            <h2>Ready to Test Your University Readiness?</h2>
+            <p>Take the 15-minute College Week Challenge and discover how prepared you are</p>
+            <a href="https://immerse-college-challenge.vercel.app/" class="btn-game" target="_blank">Play College Week Challenge</a>
+        </div>
+    </section>
+
+    <!-- University Logos Section -->
+    <section class="universities">
+        <div class="container">
+            <h2>Featured Universities in Our Program</h2>
+            <div class="logos-grid">
+                <img src="assets/logo-cambridge.png" alt="Cambridge University">
+                <img src="assets/logo-oxford.png" alt="Oxford University">
+                <img src="assets/logo-yale.png" alt="Yale University">
+                <img src="assets/logo-harvard.png" alt="Harvard University">
+                <img src="assets/logo-unsw.png" alt="UNSW Sydney">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; Immerse Education. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Immerse Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thank-you-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #003366 0%, #0066cc 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .thank-you-content {
+            max-width: 700px;
+            background: white;
+            color: #003366;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            background: #28a745;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s ease-in-out;
+        }
+
+        .checkmark::after {
+            content: "✓";
+            font-size: 60px;
+            color: white;
+            font-weight: bold;
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .thank-you-content h1 {
+            font-size: 2.5rem;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .thank-you-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .email-notice {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #0066cc;
+        }
+
+        .email-notice strong {
+            color: #003366;
+        }
+
+        .cta-section {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .cta-section h2 {
+            font-size: 1.8rem;
+            color: #003366;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            margin-bottom: 25px;
+        }
+
+        .btn-game-thankyou {
+            display: inline-block;
+            padding: 18px 45px;
+            background: linear-gradient(135deg, #0066cc 0%, #003366 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-game-thankyou:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.5);
+        }
+
+        .back-home {
+            margin-top: 30px;
+        }
+
+        .back-home a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-home a:hover {
+            color: #003366;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .thank-you-content {
+                padding: 40px 25px;
+            }
+
+            .thank-you-content h1 {
+                font-size: 2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-content">
+            <div class="checkmark"></div>
+            
+            <h1>Thank You for Registering!</h1>
+            
+            <p>You're now registered for our exclusive university admissions webinar.</p>
+            
+            <div class="email-notice">
+                <p><strong>Check your email!</strong></p>
+                <p>We've sent you a confirmation email with:</p>
+                <ul style="text-align: left; display: inline-block; margin-top: 10px;">
+                    <li>Webinar date and time</li>
+                    <li>Zoom meeting link</li>
+                    <li>Pre-webinar preparation materials</li>
+                </ul>
+            </div>
+
+            <div class="cta-section">
+                <h2>While You Wait...</h2>
+                <p>Test your university readiness with our interactive College Week Challenge!</p>
+                <p>Discover how well you'd handle life at top universities like Harvard, Oxford, Cambridge, Yale, and UNSW.</p>
+                
+                <a href="https://immerse-college-challenge.vercel.app/" class="btn-game-thankyou" target="_blank">
+                    Play College Week Challenge
+                </a>
+                
+                <p style="margin-top: 20px; font-size: 0.95rem; color: #777;">
+                    ⏱️ Takes only 15-20 minutes | 📊 Get instant personalized results
+                </p>
+            </div>
+
+            <div class="back-home">
+                <a href="index.html">← Return to Home Page</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Track thank you page view
+        console.log('Thank you page loaded');
+        
+        // If using analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+                'send_to': 'YOUR_CONVERSION_ID',
+                'event_category': 'webinar',
+                'event_label': 'registration_complete'
+            });
+        }
+    </script>
+</body>
+</html>
